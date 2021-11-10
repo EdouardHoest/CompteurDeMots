@@ -23,9 +23,8 @@ public abstract class Compteur {
                     if (listeMot5.length > 4) {
                         addOccurrence(m);
                         nbMots5++;
-                    } else {
-                        nbMots++;
                     }
+                    nbMots++;
                 }
             }
         }catch(Exception e) {
