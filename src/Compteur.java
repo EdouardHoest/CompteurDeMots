@@ -9,6 +9,14 @@ public abstract class Compteur {
     private int nbMots5;
     public abstract void addOccurrence(String mot);
 
+    public int getNbMots() {
+        return nbMots;
+    }
+
+    public int getNbMots5() {
+        return nbMots5;
+    }
+
     public Compteur(String fichierTexte){
         try {
             Scanner in = new Scanner(new File(fichierTexte));
@@ -32,4 +40,5 @@ public abstract class Compteur {
             System.exit(1);
         }
     }
+
 }
