@@ -12,7 +12,14 @@ public class Mot {
     public int getOccurrence(){
         return cpt;
     }
+    public void setOccurence(int i){
+        cpt = i;
+    }
     public String getMot(){
         return mot;
+    }
+
+    public void affiche(){
+        System.out.println(cpt + " " + mot);
     }
 }

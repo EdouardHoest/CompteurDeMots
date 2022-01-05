@@ -1,6 +1,4 @@
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.util.Scanner;
 
 public abstract class Compteur {
@@ -17,14 +15,19 @@ public abstract class Compteur {
         return nbMots5;
     }
 
+    public String getNomFichier() {
+        return nomFichier;
+    }
+
     public Compteur(String fichierTexte){
+        nomFichier = fichierTexte;
         try {
             Scanner in = new Scanner(new File(fichierTexte));
             in.useDelimiter(" ");
 
             while (in.hasNextLine()) {
                 String line = in.nextLine();
-                String line2 = line.replaceAll("\\p{Punct}", "");
+                String line2 = line.replaceAll("\\p{Punct}", " ");
                 String[] listeMot = line2.toLowerCase().split(" |\r\n");
                 for (String m : listeMot) {
                     String[] listeMot5 = m.split("");
