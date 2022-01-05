@@ -23,10 +23,10 @@ public class MotArbre extends Mot{
         return droite;
     }
 
-    public vois setDroite(MotArbre d){
+    public void setDroite(MotArbre d){
         droite=d;
     }
-    public vois setGauche(MotArbre g){
+    public void setGauche(MotArbre g){
         gauche=g;
     }
     // + d’autre méthodes à implémenter
